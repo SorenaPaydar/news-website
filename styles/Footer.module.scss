@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+.Footer {
+    height: 220px;
+    width: 700px;
+    text-align: center;
+    margin: 0 auto;
+
+    .container {
+        width: 500px;
+        height: 170px;
+        margin: 0 auto;
+        border-bottom: 1px solid #e5e5e5;
+
+        .title span {
+            text-transform: uppercase;
+            font-weight: 500;
+            margin: 0 auto;
+            font-family: "PT Serif";
+            font-style: normal;
+            font-size: 25px;
+            line-height: 33px;
+            letter-spacing: 2.5px;
+
+            color: #171717;
+        }
+    }
+
+    .links {
+        width: 300px;
+        height: 20px;
+        padding-top: 30px;
+        margin: 0 auto;
+
+        ul {
+            font-family: "PT Sans";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0px;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            color: #666666;
+        }
+    }
+
+    .socialNetworks {
+        width: 250px;
+        padding-top: 30px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .copyright {
+        width: 500px;
+        line-height: 50px;
+        margin: 0 auto;
+        text-align: center;
+
+        span {
+            font-family: "PT Sans";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0px;
+            display: inline-block;
+            vertical-align: middle;
+            color: #666666;
+        }
+    }
+}
