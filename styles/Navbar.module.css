@@ -1,0 +1,24 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    padding: 10px;
+}
+.title{
+    font-size: 2rem;
+    margin: 5px 0 5px 70px;
+    text-decoration: underline;
+    text-decoration-color:#ffffb3;
+}
+.links{
+    margin-right: 50px;
+}
+.links a{
+    margin: 5px 15px;
+}
+.links a:hover{
+    text-decoration: underline;
+    text-decoration-color: #ffffb3;
+    cursor: pointer;
+}
