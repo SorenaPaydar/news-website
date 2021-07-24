@@ -1,6 +1,10 @@
 .Searchbar {
   .searchLogo {
-    i {
+    .searchIcon {
+      font-size: x-large;
+      position: relative;
+    }
+    .closeIcon {
       font-size: x-large;
       position: relative;
     }
@@ -15,10 +19,13 @@
         width: 0%;
         transition: all 0.3s ease;
       }
-      i {
+      .searchIcon {
         pointer-events: none;
         color: #333;
         top: 5px;
+      }
+      .closeIcon {
+        font-size: 0;
       }
       input {
         width: 10px;
@@ -34,7 +41,7 @@
     .openSearch {
       display: inline-block;
       background-color: #fff;
-      padding: 5px 0 5px 15px;
+      padding: 5px 0 5px 5px;
       transition: all 1s ease;
       border-radius: 8px;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -47,7 +54,7 @@
         background-color: #f0ad4e;
         transition: all 1s ease 0.5s;
       }
-      
+
       input {
         transition: width 1s ease, opacity 0.5s ease 0.5s;
         opacity: 1;
@@ -57,9 +64,16 @@
         outline: none;
         color: darken(#f0ad4e, 25);
       }
-      i {
+      .searchIcon {
         top: 5px;
         right: 5px;
+        color: #333;
+        cursor: pointer;
+      }
+
+      .closeIcon {
+        top: 5px;
+        left: 0;
         color: #333;
         cursor: pointer;
       }

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "../styles/Searchbar.module.scss";
 import { useRouter } from "next/router";
-import { useFetch } from "react-use-fetch-hooks";
 import { AiOutlineSearch } from "react-icons/ai";
 
 const Searchbar = () => {
@@ -28,7 +27,7 @@ const Searchbar = () => {
             placeholder="Search..."
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <i onClick={() => searchHandler()}>
+          <i className={styles.searchIcon} onClick={() => searchHandler()}>
             <AiOutlineSearch />
           </i>
         </label>
