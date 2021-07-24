@@ -1,13 +1,14 @@
 import styles from '../styles/Carousel.module.scss';
 import { useEffect, useState } from 'react';
 import { AiOutlineLeft,AiOutlineRight } from "react-icons/ai";
-import Slide from './slide';
+
+
 
 const Carousel = ({headingsRes}) => {
     const headings = headingsRes.articles;
     const [indx, setindx] = useState(0);
     const length = headings.length;
-    console.log(headings);
+
     const next = ()=>{
         if(indx===length-1){
             setindx(0);
@@ -26,8 +27,10 @@ const Carousel = ({headingsRes}) => {
     }
     const [timer,settimer]=useState(null)
     useEffect(() => {
-        settimer(setInterval(next,3000));
-    },[]);
+        clearInterval(timer);
+        settimer(null);
+        settimer(setInterval(next,10000));
+    },[indx]);
     
     return ( 
         <div className={styles.sliderContainer}>
@@ -38,7 +41,7 @@ const Carousel = ({headingsRes}) => {
             {headings.map((slide,index)=>
                 <div className={indx===index?styles.activeSlide:styles.slidePic}>
                     <img src={slide.urlToImage} />
-                    <div className={styles.headerTitle}>{slide.title}</div>
+                    <div className={styles.headerTitle}><a target='_blank' href={slide.url}>{slide.title}</a></div>
                 </div>
             )}
             </div>
