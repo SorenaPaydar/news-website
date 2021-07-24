@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.scss'
 const Home = ({headingsRes}) => {
   return (
     <div className={styles.home}>
-      <Carousel headingsRes={headingsRes} />
+      {/* <Carousel headingsRes={headingsRes} /> */}
     </div> 
     );
 
