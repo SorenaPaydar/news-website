@@ -43,8 +43,15 @@
                 height: 20vh;
                 color: white;
                 font-weight: bolder;
-                background-image: linear-gradient(180deg, transparent,30%, black);
+                background-image: linear-gradient(180deg, transparent,50%, black);
                 margin: 0;
+                a{
+                    color: white;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
             }
             
             img{

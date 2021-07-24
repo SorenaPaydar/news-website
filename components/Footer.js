@@ -12,7 +12,7 @@ const Footer = () => {
         <div className={styles.Footer}>
             <div className={styles.container}>
                 <div className={styles.title}>
-                    <span>fashion</span>
+                    <span>news</span>
                 </div>
                 <div className={styles.links}>
                     <ul>
