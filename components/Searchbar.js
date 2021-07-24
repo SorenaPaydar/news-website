@@ -21,6 +21,13 @@ const Searchbar = () => {
         <label
           className={isActive ? styles.openSearch : styles.closeSearch}
           onClick={() => setActive(!isActive)}
+          onKeyPress={(e) => {
+            e.persist();
+            if (e.key === "Enter") {
+              e.preventDefault();
+              searchHandler();
+            }
+          }}
         >
           <input
             type="text"

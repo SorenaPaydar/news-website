@@ -15,8 +15,7 @@ const Home = ({headingsResJson,newsListResJson}) => {
     <div className={styles.home}>
       <Carousel headingsRes={headingsResJson} />
       <div className={styles.content}>
-        <div className={styles.newsList}><NewsList newsListResJson={newsListResJson.articles}/></div>
-        <div className={styles.categoriesContainer}><div className={styles.categories}></div></div>
+        <NewsList newsListResJson={newsListResJson.articles}/>
       </div>
       <div className={styles.buttonsContainer}>
         <div className={styles.buttons}>
@@ -29,9 +28,9 @@ const Home = ({headingsResJson,newsListResJson}) => {
 
 }
 export const getServerSideProps = async (context) => {
-  const headingRes = await fetch('https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apiKey=c489eabb34bd400091e71c7c614b5576');
+  const headingRes = await fetch('https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apiKey=0ce9a2e61d774b4d916604067cb27fd6');
   const headingsResJson = await headingRes.json();
-  const newsListRes = await fetch('https://newsapi.org/v2/top-headlines?language=en&apiKey=c489eabb34bd400091e71c7c614b5576')
+  const newsListRes = await fetch('https://newsapi.org/v2/top-headlines?language=en&apiKey=0ce9a2e61d774b4d916604067cb27fd6')
   const newsListResJson = await newsListRes.json();
 
   return {
