@@ -3,3 +3,17 @@
     display: flex;
     flex-wrap: wrap;
 }
+.content{
+    width: 66%;
+    padding: 50px;
+
+}
+.categoriesContainer{
+    display: flex;
+    .categories{
+        margin: 50px 0;
+        align-self: stretch;
+        border-left: 1px solid rgb(230,230,230);
+    }
+    width: 34%;
+}
