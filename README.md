@@ -1,6 +1,6 @@
 # News Web App
 
-An open-source web app using SSR provided by NextJs.
+An open-source news website client, using React and NextJs.
 
 ## Installation and Setup Instructions
 
