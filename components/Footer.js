@@ -43,7 +43,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className={styles.copyright}>
-                <span>@2019 Logwork. All Right Reserved.</span>
+                <span>copyright @2021.</span>
             </div>
         </div>
     )

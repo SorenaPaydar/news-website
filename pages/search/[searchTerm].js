@@ -1,10 +1,11 @@
 import NewsList from "../../components/NewsList";
 import styles from "../../styles/SearchResult.module.scss";
 
-const searchResult = ({ searchResJSON }) => {
+const searchResult = ({ searchResJSON,searchTerm }) => {
+  console.log(searchTerm);
   return (
     <div className={styles.searchResult}>
-      {searchResJSON && <NewsList newsListResJson={searchResJSON.articles} />}
+      <NewsList newsListResJson={searchResJSON} />
     </div>
   );
 };
@@ -12,13 +13,14 @@ const searchResult = ({ searchResJSON }) => {
 export const getServerSideProps = async (context) => {
   const searchTerm = context.params.searchTerm;
   const searchRes = await fetch(
-    `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=90a29b9db9e548c78bb172767e024f45`
+    `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=3ff4a0cef35e4beb8b4c0554c5fad66b`
   );
   const searchResJSON = await searchRes.json();
 
   return {
     props: {
       searchResJSON,
+      searchTerm
     },
   };
 };

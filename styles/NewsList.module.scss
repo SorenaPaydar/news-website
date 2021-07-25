@@ -1,19 +1,44 @@
-
-.newsList{
-    display: flex;
-    flex-wrap: wrap;
-}
-.content{
-    width: 66%;
-    padding: 50px;
-
-}
-.categoriesContainer{
-    display: flex;
-    .categories{
-        margin: 50px 0;
-        align-self: stretch;
-        border-left: 1px solid rgb(230,230,230);
+.container{
+    margin-bottom: 100px;
+    .newsList{
+        display: flex;
+        flex-wrap: wrap;
     }
-    width: 34%;
+    .newslistContainer{
+        width: 66%;
+        padding: 50px;
+
+    }
+    .categoriesContainer{
+        display: flex;
+        .categories{
+            margin: 50px 0;
+            align-self: stretch;
+            border-left: 1px solid rgb(230,230,230);
+        }
+        width: 34%;
+    }
+    .content{
+        margin: 100px 250px 0 250px;
+        background-color: white;
+        display: flex;
+    }
+    .buttonsContainer{
+        text-align: center;
+        .buttons{
+            display: inline-block;
+            border: 1px solid rgb(230,230,230);
+            button{
+                border: none;
+                background-color: white;
+                width: 80px;
+                padding: 10px;
+                &:hover{
+                    cursor: pointer;
+                    color: #C9A96E;
+                }
+            }
+        }
+            
+    }
 }

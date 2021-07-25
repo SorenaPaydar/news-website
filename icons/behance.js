@@ -8,11 +8,11 @@ function BehanceIcon(props) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path
+      {/* <path
         clipRule="evenodd"
         d="M18 35c9.389 0 17-7.611 17-17S27.389 1 18 1 1 8.611 1 18s7.611 17 17 17z"
         stroke="#E5E5E5"
-      />
+      /> */}
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -20,7 +20,7 @@ function BehanceIcon(props) {
         fill="#666"
       />
     </svg>
-  )
+  );
 }
 
-export default BehanceIcon
+export default BehanceIcon;
