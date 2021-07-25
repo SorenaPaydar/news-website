@@ -1,10 +1,11 @@
 import NewsList from "../../components/NewsList";
 import styles from "../../styles/SearchResult.module.scss";
 
-const searchResult = ({ searchResJSON }) => {
+const searchResult = ({ searchResJSON,searchTerm }) => {
+  console.log(searchTerm);
   return (
     <div className={styles.searchResult}>
-      {searchResJSON && <NewsList newsListResJson={searchResJSON.articles} />}
+      <NewsList newsListResJson={searchResJSON} />
     </div>
   );
 };
@@ -19,6 +20,7 @@ export const getServerSideProps = async (context) => {
   return {
     props: {
       searchResJSON,
+      searchTerm
     },
   };
 };

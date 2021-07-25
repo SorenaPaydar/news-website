@@ -1,7 +1,6 @@
 import Carousel from '../components/Carousel'
 import NewsList from '../components/NewsList';
 import styles from '../styles/Home.module.scss'
-import { useRouter } from 'next/router';
 
 const Page = ({headingsResJson,newsListResJson,page}) => {
   return (

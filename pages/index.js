@@ -1,17 +1,8 @@
 import Carousel from '../components/Carousel'
 import NewsList from '../components/NewsList';
 import styles from '../styles/Home.module.scss'
-import { useRouter } from 'next/router';
 
 const Home = ({headingsResJson,newsListResJson}) => {
-  const router = useRouter();
-  const next = () => {
-    router.push('/'+(2));
-  }
-  const pre = () => {
-    router.push('/'+(parseInt(page)-1));
-  }
-  const page = {page:"1"};
   return (
     <div className={styles.home}>
       <Carousel headingsRes={headingsResJson} />
