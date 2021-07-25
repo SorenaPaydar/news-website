@@ -1,4 +1,4 @@
-import styles from '../styles/News.module.scss'
+import styles from "../styles/News.module.scss";
 
 const News = ({newsDetails:n}) => {
     const fixdate = (date) => {

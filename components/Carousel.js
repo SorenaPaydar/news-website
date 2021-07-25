@@ -49,5 +49,4 @@ const Carousel = ({headingsRes}) => {
      );
 }
 
-
 export default Carousel
