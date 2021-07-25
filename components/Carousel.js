@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { AiOutlineLeft,AiOutlineRight } from "react-icons/ai";
 
 
-
 const Carousel = ({headingsRes}) => {
     const headings = headingsRes.articles;
     const [indx, setindx] = useState(0);

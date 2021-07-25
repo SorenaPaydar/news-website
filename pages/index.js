@@ -30,7 +30,7 @@ const Home = ({headingsResJson,newsListResJson}) => {
 export const getServerSideProps = async (context) => {
   const headingRes = await fetch('https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apiKey=0ce9a2e61d774b4d916604067cb27fd6');
   const headingsResJson = await headingRes.json();
-  const newsListRes = await fetch('https://newsapi.org/v2/top-headlines?language=en&apiKey=0ce9a2e61d774b4d916604067cb27fd6')
+  const newsListRes = await fetch('https://newsapi.org/v2/top-headlines?language=en&apiKey=90a29b9db9e548c78bb172767e024f45')
   const newsListResJson = await newsListRes.json();
 
   return {

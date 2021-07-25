@@ -12,7 +12,7 @@ const searchResult = ({ searchResJSON }) => {
 export const getServerSideProps = async (context) => {
   const searchTerm = context.params.searchTerm;
   const searchRes = await fetch(
-    `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=c489eabb34bd400091e71c7c614b5576`
+    `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=90a29b9db9e548c78bb172767e024f45`
   );
   const searchResJSON = await searchRes.json();
 

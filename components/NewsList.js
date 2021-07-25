@@ -6,7 +6,7 @@ const NewsList = ({newsListResJson}) => {
     return ( 
         <div className={styles.content}>
             <div className={styles.newsList}>
-                {newsListResJson.map(news => (
+                {newsListResJson && newsListResJson.map(news => (
                     <News newsDetails={news}/>
                 ))}
             </div>
