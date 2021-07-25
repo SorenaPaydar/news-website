@@ -1,0 +1,14 @@
+.button{
+    width: 50px !important;
+}
+.disabled{
+    background-color: #C9A96E !important;
+    color: white;
+    &:hover{
+        color: white !important;
+    }
+}
+.nab{
+    color: #C9A96E;
+    font-weight: bolder;
+}

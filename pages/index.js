@@ -11,26 +11,19 @@ const Home = ({headingsResJson,newsListResJson}) => {
   const pre = () => {
     router.push('/'+(parseInt(page)-1));
   }
+  const page = {page:"1"};
   return (
     <div className={styles.home}>
       <Carousel headingsRes={headingsResJson} />
-      <div className={styles.content}>
-        <NewsList newsListResJson={newsListResJson.articles}/>
-      </div>
-      <div className={styles.buttonsContainer}>
-        <div className={styles.buttons}>
-          <button className={styles.pre} disabled={true} onClick={pre}>previous</button>
-          <button className={styles.next} onClick={next}>next</button>
-        </div>
-      </div>
+      <NewsList newsListResJson={newsListResJson} page="1"/>
     </div> 
     );
 
 }
 export const getServerSideProps = async (context) => {
-  const headingRes = await fetch('https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apiKey=0ce9a2e61d774b4d916604067cb27fd6');
+  const headingRes = await fetch('https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apiKey=90a29b9db9e548c78bb172767e024f45');
   const headingsResJson = await headingRes.json();
-  const newsListRes = await fetch('https://newsapi.org/v2/top-headlines?language=en&apiKey=0ce9a2e61d774b4d916604067cb27fd6')
+  const newsListRes = await fetch('https://newsapi.org/v2/top-headlines?language=en&pageSize=40&apiKey=90a29b9db9e548c78bb172767e024f45')
   const newsListResJson = await newsListRes.json();
 
   return {
