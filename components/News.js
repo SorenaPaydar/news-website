@@ -11,7 +11,7 @@ const News = ({newsDetails:n}) => {
                 <img src={n.urlToImage}/>
             </div>
             <div className={styles.content}>    
-                <a href={n.url}>
+                <a className={styles.link} href={n.url}>
                     <h4 className={styles.title}>{n.title}</h4>
                 </a>
                 <div className={styles.details}>
