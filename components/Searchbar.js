@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import styles from "../styles/Searchbar.module.scss";
 import { useRouter } from "next/router";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -13,17 +13,11 @@ const Searchbar = () => {
     }
   };
 
-  const [isActive, setActive] = useState(false);
-  const ref = useRef();
-  useOnClickOutside(ref, () => setActive(false));
-
   return (
     <div className={styles.Searchbar}>
       <div className={styles.searchLogo}>
         <label
-          className={isActive ? styles.openSearch : styles.closeSearch}
-          onClick={() => setActive(true)}
-          ref={ref}
+          className={styles.searchLabel}
           onKeyPress={(e) => {
             e.persist();
             if (e.key === "Enter") {
