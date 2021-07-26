@@ -9,7 +9,7 @@ const Searchbar = () => {
 
   const searchHandler = () => {
     if (searchTerm !== "") {
-      router.push("/search/" + searchTerm);
+      router.push("/search/" + searchTerm +'/1');
     }
   };
 
