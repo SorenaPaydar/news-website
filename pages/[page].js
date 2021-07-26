@@ -6,15 +6,16 @@ const Page = ({headingsResJson,newsListResJson,page}) => {
   return (
     <div className={styles.home}>
       <Carousel headingsRes={headingsResJson} />
-      <NewsList newsListResJson={newsListResJson} page={page}/>
+      <NewsList newsListResJson={newsListResJson} page={page} path={''}/>
     </div> 
     );
 }
 export const getServerSideProps = async (context) => {
-    const headingRes = await fetch('https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apiKey=3ff4a0cef35e4beb8b4c0554c5fad66b');
+    const key = '25254bb32bf145d6b91a9234fb4b6fff'
+    const headingRes = await fetch(`https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apiKey=${key}`);
     const headingsResJson = await headingRes.json();
     const page = context.params.page;
-    const newsListRes = await fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=40&page=${page}&apiKey=3ff4a0cef35e4beb8b4c0554c5fad66b`)
+    const newsListRes = await fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=40&page=${page}&apiKey=${key}`)
     const newsListResJson = await newsListRes.json();
   
     return {
