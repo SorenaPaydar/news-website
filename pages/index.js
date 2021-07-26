@@ -9,7 +9,6 @@ const Home = ({headingsResJson,newsListResJson}) => {
       <NewsList newsListResJson={newsListResJson} page="1"/>
     </div> 
     );
-
 }
 export const getServerSideProps = async (context) => {
   const headingRes = await fetch('https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apiKey=3ff4a0cef35e4beb8b4c0554c5fad66b');

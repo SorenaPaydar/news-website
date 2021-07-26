@@ -13,14 +13,11 @@ const Searchbar = () => {
     }
   };
 
-  const [isActive, setActive] = useState(false);
-
   return (
     <div className={styles.Searchbar}>
       <div className={styles.searchLogo}>
         <label
-          className={isActive ? styles.openSearch : styles.closeSearch}
-          onClick={() => setActive(!isActive)}
+          className={styles.searchLabel}
           onKeyPress={(e) => {
             e.persist();
             if (e.key === "Enter") {
@@ -42,5 +39,22 @@ const Searchbar = () => {
     </div>
   );
 };
+
+function useOnClickOutside(ref, handler) {
+  useEffect(() => {
+    const listener = (event) => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+      handler(event);
+    };
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, [ref, handler]);
+}
 
 export default Searchbar;

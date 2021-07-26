@@ -1,31 +1,36 @@
-.navbar{
-    display: flex;
-    align-items: center;
-    background-color: #F2F2F2;
-    padding: 0;
-    right: 0;
-    left: 0;
-    justify-content: space-between;
-}
-.title{
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 0;
+  right: 0;
+  left: 0;
+  justify-content: space-between;
+  font-family: 'Merriweather';
+  
+  .title {
     font-size: 2rem;
     margin: 5px 0 5px 70px;
     text-decoration: underline;
-    text-decoration-color:#ffffb3;
-}
-.links{
+    text-decoration-color: #ffffb3;
+  }
+  .links {
     margin-right: 50px;
     display: flex;
     align-items: stretch;
     align-self: stretch;
-}
-.links a{
+  }
+  .links a {
     margin: 0 15px;
     display: flex;
     align-items: center;
-}
-.links a:hover{
+  }
+  .links a:hover {
     text-decoration: underline;
     text-decoration-color: #ffffb3;
     cursor: pointer;
+  }
 }
+

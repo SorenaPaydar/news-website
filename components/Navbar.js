@@ -7,7 +7,7 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
     return (
         <div className={styles.navbar}>
-            <h2 className={styles.title}>Title</h2>
+            <h2 className={styles.title}>NEWS</h2>
             <div className={styles.searchbar}>
                 <Searchbar />
             </div>
